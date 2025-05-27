@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Dr.Agenda - Sistema de Agendamento Médico**  
 
-## Getting Started
+📅 **Aplicativo web para gestão de clínicas e agendamento de consultas**  
 
-First, run the development server:
+---
 
+## **🚀 Como Rodar o Projeto**  
+
+### **Pré-requisitos**  
+- Node.js 18+  
+- PostgreSQL (ou [Neon](https://neon.tech/) para serverless)  
+- Git  
+
+### **Passos Iniciais**  
 ```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/doutor-agenda.git
+
+# 2. Instale as dependências
+npm install
+
+# 3. Configure o arquivo .env
+cp .env.example .env
+# Edite com suas credenciais do banco de dados
+
+# 4. Execute as migrações do Drizzle ORM
+npx drizzle-kit push:pg
+
+# 5. Inicie o servidor
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Principais Tecnologias**  
+- **Frontend**: Next.js 15 + Tailwind CSS  
+- **Backend**: API Routes (Next.js)  
+- **Banco de Dados**: PostgreSQL + Drizzle ORM  
+- **Ferramentas**: ESLint, Prettier, Conventional Commits  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **💡 Comandos Úteis**  
+| Comando                | Descrição                          |
+|------------------------|-----------------------------------|
+| `npm run dev`          | Inicia o servidor de desenvolvimento |
+| `npm run lint`         | Verifica erros de código           |
+| `npm run format`       | Formata o código automaticamente   |
+| `npx drizzle-kit push` | Sincroniza schema com o banco      |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## **📌 Dicas Rápidas**  
+- Acesse `http://localhost:3000` após iniciar  
+- Use `npx drizzle-kit studio` para visualizar o banco de dados  
+- Configure o VS Code com as extensões recomendadas  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projeto pronto para desenvolvimento! ✨  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*(Consulte [DOCS.md](./DOCS.md) para detalhes completos de configuração)*
